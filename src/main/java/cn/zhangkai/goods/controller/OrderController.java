@@ -1,6 +1,6 @@
 package cn.zhangkai.goods.controller;
 
-import cn.zhangkai.goods.pojo.OrderDetail;
+import cn.zhangkai.goods.pojo.OrderGoods;
 import cn.zhangkai.goods.pojo.OrderMaster;
 import cn.zhangkai.goods.pojo.vo.OrderVO;
 import cn.zhangkai.goods.utils.ApiJSONResult;
@@ -11,13 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-/**
- * @program: book_small
- * @className: OrderController
- * @description: 订单服务
- * @author: zxh
- * @date: 2019-04-02 00:21
- */
+
 @Api(value = "订单接口", tags = "订单操作")
 @RestController
 @RequestMapping("/order")
@@ -34,8 +28,8 @@ public class OrderController {
     @PostMapping
     public ApiJSONResult saveOrder(@ApiParam(value="订单信息", required = true) @RequestBody OrderVO orderVO){
         OrderMaster orderMaster = orderVO.getOrderMaster();
-        List<OrderDetail> orderDetailList = orderVO.getOrderDetailList();
-        basicController.orderService.saveOrder(orderMaster,orderDetailList);
+        List<OrderGoods> OrderGoodsList = orderVO.getorderGoodsList();
+        basicController.orderService.saveOrder(orderMaster,OrderGoodsList);
         return ApiJSONResult.ok();
     }
 

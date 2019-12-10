@@ -1,62 +1,93 @@
 package cn.zhangkai.goods.pojo;
 
+import lombok.Data;
+
 import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import java.math.BigDecimal;
 import java.util.Date;
 
-/**
- * @className: OrderMaster
- * @description:
- * @author: zxh
- * @date: 2019-3-29 10:03:57
- */
-@Table(name = "tb_order_master")
+@Data
+@Table(name = "order_info")
 public class OrderMaster {
     @Id
     private String id;
 
     /**
-     * 买家名字
+     * 买家ID
      */
-    @Column(name = "user_name")
-    private String userName;
+    @Column(name = "uid")
+    private String uid;
 
     /**
-     * 买家电话
+     * 商品信息
      */
-    @Column(name = "user_phone")
-    private String userPhone;
+    @Column(name = "goods_id")
+    private String goodsId;
 
     /**
-     * 买家地址
+     * 数量
      */
-    @Column(name = "user_address")
-    private String userAddress;
+    @Column(name = "num")
+    private int num;
 
     /**
-     * 买家微信openid
+     * 商品编号
      */
-    @Column(name = "user_openid")
-    private String userOpenid;
+    @Column(name = "order_code")
+    private String orderCode;
 
     /**
-     * 订单总额
+     * 1-已支付 0-未支付
      */
-    private BigDecimal amount;
+    private Byte is_pay;
 
     /**
-     * 订单状态，默认0：新下单
+     * 付款时间
      */
-    @Column(name = "order_status")
-    private Byte orderStatus;
+    @Column(name = "pay_time")
+    private Date payTime;
 
     /**
-     * 支付状态，默认0：未支付
+     * 支付单号
      */
-    @Column(name = "pay_status")
-    private Byte payStatus;
+    @Column(name = "pay_order")
+    private Byte payOrder;
+
+    /**
+     * 1-已收货 0 未收货
+     */
+    @Column(name = "is_ship")
+    private Byte isShip;
+
+    /**
+     * 收货时间
+     */
+    @Column(name = "ship_time")
+    private Date shipTime;
+
+    /**
+     * is_recepit
+     * 0-未发货 1-已发货
+     */
+    @Column(name = "is_recepit")
+    private Byte isRecepit;
+
+    /**
+     * recepit_time
+     * 0-未发货 1-已发货
+     */
+    @Column(name = "recepit_time")
+    private Date recepitTime;
+
+    /**
+     * ship_code
+     * 快递单号
+     */
+    @Column(name = "ship_code")
+    private Date shipCode;
+
 
     /**
      * 创建时间
@@ -71,178 +102,10 @@ public class OrderMaster {
     private Date updateTime;
 
     /**
-     * @return id
+     * address_id
+     * 地址
      */
-    public String getId() {
-        return id;
-    }
+    @Column(name = "address_id")
+    private Date addressId;
 
-    /**
-     * @param id
-     */
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    /**
-     * 获取买家名字
-     *
-     * @return user_name - 买家名字
-     */
-    public String getUserName() {
-        return userName;
-    }
-
-    /**
-     * 设置买家名字
-     *
-     * @param userName 买家名字
-     */
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    /**
-     * 获取买家电话
-     *
-     * @return user_phone - 买家电话
-     */
-    public String getUserPhone() {
-        return userPhone;
-    }
-
-    /**
-     * 设置买家电话
-     *
-     * @param userPhone 买家电话
-     */
-    public void setUserPhone(String userPhone) {
-        this.userPhone = userPhone;
-    }
-
-    /**
-     * 获取买家地址
-     *
-     * @return user_address - 买家地址
-     */
-    public String getUserAddress() {
-        return userAddress;
-    }
-
-    /**
-     * 设置买家地址
-     *
-     * @param userAddress 买家地址
-     */
-    public void setUserAddress(String userAddress) {
-        this.userAddress = userAddress;
-    }
-
-    /**
-     * 获取买家微信openid
-     *
-     * @return user_openid - 买家微信openid
-     */
-    public String getUserOpenid() {
-        return userOpenid;
-    }
-
-    /**
-     * 设置买家微信openid
-     *
-     * @param userOpenid 买家微信openid
-     */
-    public void setUserOpenid(String userOpenid) {
-        this.userOpenid = userOpenid;
-    }
-
-    /**
-     * 获取订单总额
-     *
-     * @return amount - 订单总额
-     */
-    public BigDecimal getAmount() {
-        return amount;
-    }
-
-    /**
-     * 设置订单总额
-     *
-     * @param amount 订单总额
-     */
-    public void setAmount(BigDecimal amount) {
-        this.amount = amount;
-    }
-
-    /**
-     * 获取订单状态，默认0：新下单
-     *
-     * @return order_status - 订单状态，默认0：新下单
-     */
-    public Byte getOrderStatus() {
-        return orderStatus;
-    }
-
-    /**
-     * 设置订单状态，默认0：新下单
-     *
-     * @param orderStatus 订单状态，默认0：新下单
-     */
-    public void setOrderStatus(Byte orderStatus) {
-        this.orderStatus = orderStatus;
-    }
-
-    /**
-     * 获取支付状态，默认0：未支付
-     *
-     * @return pay_status - 支付状态，默认0：未支付
-     */
-    public Byte getPayStatus() {
-        return payStatus;
-    }
-
-    /**
-     * 设置支付状态，默认0：未支付
-     *
-     * @param payStatus 支付状态，默认0：未支付
-     */
-    public void setPayStatus(Byte payStatus) {
-        this.payStatus = payStatus;
-    }
-
-    /**
-     * 获取创建时间
-     *
-     * @return create_time - 创建时间
-     */
-    public Date getCreateTime() {
-        return createTime;
-    }
-
-    /**
-     * 设置创建时间
-     *
-     * @param createTime 创建时间
-     */
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
-
-    /**
-     * 获取修改时间
-     *
-     * @return update_time - 修改时间
-     */
-    public Date getUpdateTime() {
-        return updateTime;
-    }
-
-    /**
-     * 设置修改时间
-     *
-     * @param updateTime 修改时间
-     */
-    public void setUpdateTime(Date updateTime) {
-        this.updateTime = updateTime;
-    }
 }

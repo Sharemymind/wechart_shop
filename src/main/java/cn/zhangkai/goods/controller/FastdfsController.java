@@ -11,12 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
-/**
- * @className: FastDFSController
- * @description:
- * @author: zxh
- * @date: 2018-12-29 09:58:59
- */
+
 @Api(value = "文件上传接口", tags = "文件操作")
 @RestController
 @RequestMapping("/fdfs")

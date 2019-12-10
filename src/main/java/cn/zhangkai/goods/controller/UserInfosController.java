@@ -11,12 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.UUID;
 
-/**
- * @className: UserInfoController
- * @description:
- * @author: zxh
- * @date: 2012-12-29 09:59:22
- */
+
 @Api(value = "用户接口", tags = "用户操作")
 @RestController
 @RequestMapping("/UserInfo")

@@ -5,12 +5,7 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-/**
- * @className: GlobalExceptionHandler
- * @description:
- * @author: zxh
- * @date: 2018-11-20 09:59:51
- */
+
 @ControllerAdvice
 public class GlobalExceptionHandler {
 

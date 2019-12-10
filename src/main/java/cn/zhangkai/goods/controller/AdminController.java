@@ -17,12 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.UUID;
 
-/**
- * @className: AdminController
- * @description: 管理员接口
- * @author: zxh
- * @date: 2018-12-29 09:58:11
- */
+
 @Api(value = "管理员接口", tags = "管理员操作")
 @RestController
 @RequestMapping(value = "/admin")

@@ -2,12 +2,7 @@ package cn.zhangkai.goods.pojo.vo;
 
 import java.util.Date;
 
-/**
- * @className: AdminVO
- * @description:
- * @author: zxh
- * @date: 2019-3-29 10:01:46
- */
+
 public class AdminVO {
 
     private Integer id;

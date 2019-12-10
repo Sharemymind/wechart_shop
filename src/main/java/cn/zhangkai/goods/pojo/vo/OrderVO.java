@@ -1,17 +1,13 @@
 package cn.zhangkai.goods.pojo.vo;
 
-import cn.zhangkai.goods.pojo.OrderDetail;
+
+import cn.zhangkai.goods.pojo.OrderGoods;
 import cn.zhangkai.goods.pojo.OrderMaster;
+import lombok.Data;
 
 import java.util.List;
 
-/**
- * @program: book_small
- * @className: OrderVO
- * @description: 订单视图
- * @author: zxh
- * @date: 2019-04-01 23:38
- */
+@Data
 public class OrderVO {
 
     /**
@@ -21,7 +17,7 @@ public class OrderVO {
     /**
      * 订单详情表信息
      */
-    private List<OrderDetail> orderDetailList;
+    private List<OrderGoods> orderGoodsList;
 
     public OrderMaster getOrderMaster() {
         return orderMaster;
@@ -31,19 +27,20 @@ public class OrderVO {
         this.orderMaster = orderMaster;
     }
 
-    public List<OrderDetail> getOrderDetailList() {
-        return orderDetailList;
+    public List<OrderGoods> getorderGoodsList() {
+        return orderGoodsList;
     }
 
-    public void setOrderDetailList(List<OrderDetail> orderDetailList) {
-        this.orderDetailList = orderDetailList;
+    public void setorderGoodsList(List<OrderGoods> orderGoodsList) {
+        this.orderGoodsList = orderGoodsList;
     }
+
 
     @Override
     public String toString() {
         return "OrderVO{" +
                 "orderMaster=" + orderMaster +
-                ", orderDetailList=" + orderDetailList +
+                ", orderGoodsList=" + orderGoodsList +
                 '}';
     }
 }

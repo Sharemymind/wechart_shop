@@ -13,12 +13,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-/**
- * @className: GoodsController
- * @description:  货物操作类
- * @author: 
- * @date: 
- */
+
 @Api(value = "商品管理接口", tags = "商品管理")
 @RestController
 @RequestMapping("/Goods")

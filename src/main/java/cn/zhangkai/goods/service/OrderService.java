@@ -1,6 +1,6 @@
 package cn.zhangkai.goods.service;
 
-import cn.zhangkai.goods.pojo.OrderDetail;
+import cn.zhangkai.goods.pojo.OrderGoods;
 import cn.zhangkai.goods.pojo.OrderMaster;
 import cn.zhangkai.goods.pojo.vo.OrderVO;
 import cn.zhangkai.goods.utils.MyPageInfo;
@@ -19,9 +19,9 @@ public interface OrderService {
     /**
      * 添加对象信息
      * @param orderMaster 表体
-     * @param orderDetailList 详情
+     * @param OrderGoodsList 详情
      */
-    void saveOrder(OrderMaster orderMaster, List<OrderDetail> orderDetailList);
+    void saveOrder(OrderMaster orderMaster, List<OrderGoods> OrderGoodsList);
 
     /**
      * 获取订单列表

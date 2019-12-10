@@ -15,13 +15,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.io.UnsupportedEncodingException;
 
-/**
- * @program: book_small
- * @className: MyHandlerInterceptor
- * @description: 拦截器
- * @author: zxh
- * @date: 2019-04-03 01:31
- */
+
 public class MyHandlerInterceptor implements HandlerInterceptor {
 
     @Autowired

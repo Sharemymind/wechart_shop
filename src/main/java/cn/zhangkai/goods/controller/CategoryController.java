@@ -11,13 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-/**
- * @program: book_small
- * @className: CategoryController
- * @description: 类别操作
- * @author: zxh
- * @date: 2019-04-01 00:20
- */
+
 @Api(value = "类别接口", tags = "类别操作")
 @RestController
 @RequestMapping(value = "/category")
